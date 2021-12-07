@@ -1,6 +1,6 @@
 #!/bin/bash -l
 #SBATCH --nodes=1
-#SBATCH --ntasks=1
+#SBATCH --ntasks=11
 #SBATCH --job-name=Au_Cluster
 #SBATCH --partition=akanane
 #SBATCH --time=7-00:00:00
@@ -11,6 +11,9 @@
 #SBATCH --mail-type=FAIL,END
 #SBATCH --export=NONE
 
-. /opt/shared/slurm/templates/libexec/openmpi.sh
+#. /opt/shared/slurm/templates/libexec/openmpi.sh
 
-python main_PSO.py 
+vpkg_require python/20200808:spec
+vpkg_require gcc/6.4.0
+
+python main.py 

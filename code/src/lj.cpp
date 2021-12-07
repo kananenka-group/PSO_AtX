@@ -28,7 +28,7 @@ void ljAA(double *xyz, double eps, double sig12,
   double dist, d2, d4, d6, d12, vx, vy, vz;
 
   E = 0.0;
-//#pragma omp parallel for default(none) shared(xyz,box,nA,nB,sig12,sig6,eps4) private(vx,vy,vz,dist,d2,d4,d6,d12)
+#pragma omp parallel for default(none) shared(E,xyz,box,nA,sig12,sig6,eps) private(vx,vy,vz,dist,d2,d4,d6,d12)
   for(int n=0; n<nA; ++n)
      for(int m=0; m<n; ++m){
 
@@ -57,7 +57,7 @@ void ljAB(double *xyzA, double *xyzB, double eps, double sig12,
   double dist, d2, d4, d6, d12, vx, vy, vz;
 
   E = 0.0;
-//#pragma omp parallel for default(none) shared(xyz,box,nA,nB,sig12,sig6,eps4) private(vx,vy,vz,dist,d2,d4,d6,d12)
+#pragma omp parallel for default(none) shared(xyzA,xyzB,box,nA,nB,sig12,sig6,eps,E) private(vx,vy,vz,dist,d2,d4,d6,d12)
   for(int n=0; n<nA; ++n)
      for(int m=0; m<nB; ++m){
 

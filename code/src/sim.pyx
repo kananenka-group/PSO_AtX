@@ -31,7 +31,7 @@ cdef extern from "lj.h" nogil:
    void ljAA(double *xyzA, double eps, double sig12, double sig6,
              int nA, double *box, double E)
 
-def fitness_function(xyz1, xyz2, box=np.array([1e10,1e10,1e10]), eps11=0.03114525, eps12=0.07178825, sig11=2.586674, sig12=2.106555, nthr=1):
+def fitness_function(xyz1, xyz2, box=np.array([1e10,1e10,1e10]), eps11=0.03114525, eps12=0.07178825, sig11=2.586674, sig12=2.106555, nthr=10):
 
    cdef int num_threads = nthr
 

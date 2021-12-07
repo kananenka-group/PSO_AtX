@@ -39,7 +39,7 @@ def main():
    c1 = 1.49445 # cognitive (particle)
    c2 = 1.49445 # social (swarm)
    n = 20	# number of particles
-   max_iter = 100
+   max_iter = 100000
    rnd = random.Random(0)
    # create n random particles
    swarm = [Particle(fitness_function,N_At, L, Au_coord) for i in range(n)]
@@ -65,6 +65,7 @@ def main():
        fo.write("\n\n <<<<<<<<<<<<<<<< Beginning of a new iteration %d out of %d >>>>>>>>>>>>>>>>>>>\n\n"%((Iter),max_iter))
        fo.flush()
        fo.write("Iter = " + str(Iter) + " best fitness = %f" % best_swarm_fitnessVal)
+     if Iter % 100 == 0:
        utils.write_coord(best_swarm_pos, Iter, Au_coord)
 
      for i in range(n): # process each particle

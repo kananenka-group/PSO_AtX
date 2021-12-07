@@ -370,7 +370,7 @@ body.cython { font-family: courier; font-size: 12; }
 <pre class="cython line score-0">&#xA0;<span class="">31</span>:    void ljAA(double *xyzA, double eps, double sig12, double sig6,</pre>
 <pre class="cython line score-0">&#xA0;<span class="">32</span>:              int nA, double *box, double E)</pre>
 <pre class="cython line score-0">&#xA0;<span class="">33</span>: </pre>
-<pre class="cython line score-104" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">34</span>: def fitness_function(xyz1, xyz2, box=np.array([1e10,1e10,1e10]), eps11=0.03114525, eps12=0.07178825, sig11=2.586674, sig12=2.106555, nthr=1):</pre>
+<pre class="cython line score-104" onclick="(function(s){s.display=s.display==='block'?'none':'block'})(this.nextElementSibling.style)">+<span class="">34</span>: def fitness_function(xyz1, xyz2, box=np.array([1e10,1e10,1e10]), eps11=0.03114525, eps12=0.07178825, sig11=2.586674, sig12=2.106555, nthr=10):</pre>
 <pre class='cython code score-104 '>/* Python wrapper */
 static PyObject *__pyx_pw_3sim_1fitness_function(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
 static PyMethodDef __pyx_mdef_3sim_1fitness_function = {"fitness_function", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_3sim_1fitness_function, METH_VARARGS|METH_KEYWORDS, 0};
@@ -394,7 +394,7 @@ static PyObject *__pyx_pw_3sim_1fitness_function(PyObject *__pyx_self, PyObject 
     values[4] = ((PyObject *)__pyx_float_0_07178825);
     values[5] = ((PyObject *)__pyx_float_2_586674);
     values[6] = ((PyObject *)__pyx_float_2_106555);
-    values[7] = ((PyObject *)__pyx_int_1);
+    values[7] = ((PyObject *)__pyx_int_10);
     if (unlikely(__pyx_kwds)) {
       Py_ssize_t kw_args;
       const Py_ssize_t pos_args = <span class='py_macro_api'>PyTuple_GET_SIZE</span>(__pyx_args);

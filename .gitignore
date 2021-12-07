@@ -13,3 +13,7 @@
 
 #setup scripts
 /code/*.sh
+
+# sim files
+/test/*.xyz
+/test/*.out
