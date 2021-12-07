@@ -15,12 +15,12 @@ from sim import fitness_function
 
 def main():
 
-   out_file_name = "results_error.out"
+   out_file_name = "../test/results_error.out"
    fo = open(out_file_name, "w")
    fo.write(" Starting new calculation \n")
 
    # Load Au coordinates
-   Au_file = open('coords_r5.xyz', 'r')
+   Au_file = open('../test/coords_r5.xyz', 'r')
    lines = Au_file.readlines()
    Au_coord = []
    for line in lines:
@@ -39,7 +39,7 @@ def main():
    c1 = 1.49445 # cognitive (particle)
    c2 = 1.49445 # social (swarm)
    n = 20	# number of particles
-   max_iter = 10000
+   max_iter = 100
    rnd = random.Random(0)
    # create n random particles
    swarm = [Particle(fitness_function,N_At, L, Au_coord) for i in range(n)]
