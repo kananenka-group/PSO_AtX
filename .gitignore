@@ -1,15 +1,15 @@
 # C extensions
-*.so
+/code/*.so
 
 # build dir
-build/
+/code/build/
 
 #
-__pycache__/
+/code/__pycache__/
 
 # src
 /src/__pycache__/
 /src/*.html
 
 #setup scripts
-*.sh
+/code/*.sh
